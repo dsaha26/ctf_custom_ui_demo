@@ -1,0 +1,15 @@
+{
+  "name": "ctf_custom-ui_demo",
+  "version": "1.0.0",
+  "description": "ctf custom ui demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://ghe.oculus-rep.com/delart-tech/ctf_custom-ui_demo"
+  },
+  "author": "",
+  "license": "ISC"
+}
