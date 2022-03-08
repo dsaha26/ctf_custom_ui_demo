@@ -1,0 +1,93 @@
+{
+    "output_directory": "c:/dtf/output/dvt/milan/testbed1",
+    "host": {
+        "host_name": "DESKTOP-B2LOU17",
+        "ip": "2620:10d:c096:161:295d:9b0b:7221:42d9",
+        "mac": "1C-69-7A-A8-98-B8",
+        "username": "facebook",
+        "password": "facebook"
+    },
+    "wifi": {
+        "attenuator": {
+            "desired": {
+                "module_name": "AttenuatorAda",
+                "port": "COM17",
+                "baudrate": 115200,
+                "timeout": 5,
+                "range": [
+                    0,
+                    95
+                ],
+                "num_ch": 4
+            }
+        },
+        "attenuation": {
+            "attenuation1": {
+                "rssi0": {
+                    "rssi_index": 0,
+                    "attenuator": "{{ profile.wifi.attenuator.desired }}",
+                    "ch": [
+                        2,
+                        4
+                    ]
+                },
+                "rssi1": {
+                    "rssi_index": 1,
+                    "attenuator": "{{ profile.wifi.attenuator.desired }}",
+                    "ch": [
+                        1,
+                        3
+                    ]
+                },
+                "min": 0,
+                "max": 95,
+                "step_divisible": 0.25
+            }
+        },
+        "link": {
+            "link1": {
+                "attenuation": "{{ profile.wifi.attenuation.attenuation1 }}",
+                "access_point": "{{ profile.wifi.access_point.ap1 }}",
+                "stations": [
+                    "{{ profile.wifi.station.sta1 }}"
+                ]
+            }
+        },
+        "access_point": {
+            "ap1": {
+                "host": {
+                    "ip": "127.0.0.1",
+                    "mac": "b4:2e:99:5b:6c:c6",
+                    "username": "facebook",
+                    "password": "facebook",
+                    "platform": "Windows"
+                },
+                "product": "{{ dut.wifi.product.archera7 }}",
+                "dut": {
+                    "ssid": "TPlink",
+                    "passphrase": "Facebook!",
+                    "ip": "192.168.0.140",
+                    "driver_path": "/root",
+                    "mac": "6C:CD:D6:1C:F7:E1"
+                }
+            }
+        },
+        "station": {
+            "sta1": {
+                "host": {
+                    "ip": "127.0.0.1",
+                    "adb_id": "2748B3SC7Q004D",
+                    "username": "root",
+                    "password": "sigma",
+                    "platform": "Android"
+                },
+                "product": "{{ dut.wifi.product.qcomwcn36 }}",
+                "dut": {
+                    "ip": "192.168.0.20",
+                    "driver_path": "/data",
+                    "mac": "2c:26:17:7b:d3:34"
+                }
+            }
+        }
+    }
+}

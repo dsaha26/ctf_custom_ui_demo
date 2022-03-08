@@ -32,18 +32,14 @@
 
 repos = {
     "dtf": {
-        "path": "dtf",
-        // url
-        "test_setup_configs_dir": "test_setups",
-        "tests_dir": "tests",
-        "test_action_configs_dir": "test_data",
+        "path": "dtf", // url
+        "test_setups_include": [ "test_setups/**/test_setup_data" ],
+        "tests_include": [ "tests/**/test_data" ]
     },
     "tg_test_runner": {
-        "path": "tg_test_runner",
-        // url
-        "test_setup_configs_dir": "test_setups",
-        "tests_dir": "tests",
-        "test_action_configs_dir": "test_data",
+        "path": "tg_test_runner", // url
+        "test_setups_include": [ "test_setups/**/test_setup_data" ],
+        "tests_include": [ "tests/**/test_data" ]
     },
 }
 
@@ -60,12 +56,12 @@ repos = {
 
 // GET list of github repo's branches and tags for [team name]
 //  called.. every time page is loaded??
-// POST [branch or tag] request json file for Test Setup [name]
+// POST [branch or tag or hash] request default json file (with embedded schema) for Test Setup [name]
 //  called after Test Setup is selected
 //  may return empty.. (for TG will be empty).. which is ok, no action
 //  if returns options, then auto switch the Env Vars to Custom UI mode and show the options
 //      disable the mode toggle too, because switching 1) serves no benefit and 2) could break the Test
-// POST [branch or tag] request json file for Test Action [name]
+// POST [branch or tag or hash] request default json file (with embedded schema) for Test Action [name]
 //  called after Test Action is selected
 //  may return empty.. (for DTF will be empty).. which is ok, no action
 //  if returns options, then auto switch the Env Vars to Custom UI mode and show the options

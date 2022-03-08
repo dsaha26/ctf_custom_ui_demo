@@ -1,0 +1,95 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://tg_test_runner.io/tests/test_e2e/test_data/schema.json",
+    "title": "test_data",
+    "description": "Test Data",
+    "type": "object",
+    "properties": {
+        "traffic_profile": {
+            "description": "Traffic Profile",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "from_device_id": {
+                        "type": "integer",
+                        "readOnly": true
+                    },
+                    "to_device_id": {
+                        "type": "integer",
+                        "readOnly": true
+                    },
+                    "from_netns": {
+                        "type": "string",
+                        "readOnly": true
+                    },
+                    "to_netns": {
+                        "type": "string",
+                        "readOnly": true
+                    },
+                    "bandwidth": {
+                        "type": "integer",
+                        "readOnly": true
+                    },
+                    "threshold": {
+                        "type": "object",
+                        "properties": {
+                            "throughput": {
+                                "type": "number"
+                            },
+                            "lost datagrams": {
+                                "type": "number",
+                                "readOnly": true
+                            }
+                        },
+                        "required": [
+                            "throughput",
+                            "lost_datagrams"
+                        ]
+                    },
+                    "port": {
+                        "type": "integer",
+                        "readOnly": true
+                    },
+                    "traffic_type": {
+                        "type": "string",
+                        "enum": [
+                            "TCP",
+                            "UDP"
+                        ]
+                    },
+                    "direction": {
+                        "type": "string",
+                        "enum": [
+                            "bi"
+                        ],
+                        "readOnly": true
+                    },
+                    "packet_size": {
+                        "type": "string",
+                        "readOnly": true
+                    },
+                    "time": {
+                        "type": "integer",
+                        "readOnly": true
+                    }
+                },
+                "required": [
+                    "from_device_id",
+                    "to_device_id",
+                    "from_netns",
+                    "to_netns",
+                    "bandwidth",
+                    "threshold",
+                    "port",
+                    "traffic_type",
+                    "direction",
+                    "packet_size",
+                    "time"
+                ]
+            },
+            "minItems": 0,
+            "uniqueItems": true
+        }
+    }
+}

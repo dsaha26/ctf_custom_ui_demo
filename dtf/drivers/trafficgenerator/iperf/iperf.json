@@ -1,0 +1,7 @@
+{
+    "streams": [
+        "rx",
+        "rx_histograms",
+        "tx"
+    ]
+}
