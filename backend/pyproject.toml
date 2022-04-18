@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "Backend"
+version = "1.0"
+description = "Custom UI Demo"
+authors = [
+    "Marshall Porter <marshallporter@fb.com>",
+]
+
+[tool.poetry.dependencies]
+python = "~3.8"
+
+Jinja2 = "3.0.3"
+PyYAML = "6.0"
+
+[tool.poetry.dev-dependencies]
+black = "21.10b0"
+flake8 = "4.0.1"
+flake8-bugbear = "21.9.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

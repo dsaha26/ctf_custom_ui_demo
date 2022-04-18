@@ -1,0 +1,53 @@
+---
+Background async task
+  can optionally use Celery library in API server now!
+  every _x_ min, API server should be pulling on its local copy of the git repos for teams to keep them up to date
+  it should NOT check out anything.. git clone should use --bare
+  and then the APIs should do a git clone from the local filesystem into some temp dir
+  and then cleanup temp dir when done
+
+
+these APIs should check out a local copy of a bare git repo that API server maintains
+  at the requested branch or tag.. or return error if not exist, somehow
+  this gets a clean folder to work in
+  then they run the scraping routing found in this demo repo for finding configs, which works for TG or DTF style
+  then clean up the checked out repo before API return
+
+
+---
+Web APIs for UI
+
+NOTE:
+hash is too open ended IMO.. tag serves as a named hash
+how would users pick from any hash in the repo anyway??
+Custom UI will not have a box for anyone to input a hash right??
+
+phase 1:
+
+GET list of github repo's branches and tags for [team name]
+ called.. every time page is loaded??
+
+GET [branch or tag or hash] list of Test Suites, Test Setups, Test Actions paths
+
+GET [branch or tag or hash] request combined json file (with embedded schema)
+    for Test Suite [path]
+        called after Test Suite is selected
+        may return empty.. (for TG will be empty).. which is ok, no action
+        if returns options, then auto switch the Env Vars to Custom UI mode and show the options
+            disable the mode toggle too, because switching 1) serves no benefit and 2) could break the Test
+
+    for Test Setup [path]
+        called after Test Setup is selected
+        may return empty.. (for TG will be empty).. which is ok, no action
+        if returns options, then auto switch the Env Vars to Custom UI mode and show the options
+            disable the mode toggle too, because switching 1) serves no benefit and 2) could break the Test
+
+    for Test Action [path]
+        called after Test Action is selected
+        may return empty.. (for DTF will be empty).. which is ok, no action
+        if returns options, then auto switch the Env Vars to Custom UI mode and show the options
+            disable the mode toggle too, because switching 1) serves no benefit and 2) could break the Test
+
+phase 2:
+
+GET [branch or tag or hash] cli schema

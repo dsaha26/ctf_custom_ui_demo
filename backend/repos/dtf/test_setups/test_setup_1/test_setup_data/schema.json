@@ -1,0 +1,38 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://dtf.io/test_setups/test_setup_1/schema.json",
+    "title": "test_setup_data",
+    "description": "Test Setup Data",
+    "type": "object",
+    "properties": {
+        "output_directory": {
+            "type": "string",
+            "readOnly": false
+        },
+        "host": {
+            "type": "object",
+            "properties": {
+                "host_name": {
+                    "type": "string",
+                    "readOnly": true
+                },
+                "ip": {
+                    "type": "string",
+                    "readOnly": true
+                },
+                "mac": {
+                    "type": "string",
+                    "readOnly": true
+                },
+                "username": {
+                    "type": "string",
+                    "readOnly": false
+                },
+                "password": {
+                    "type": "string",
+                    "readOnly": false
+                }
+            }
+        }
+    }
+}

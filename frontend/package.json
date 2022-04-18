@@ -11,5 +11,9 @@
     "url": "https://ghe.oculus-rep.com/delart-tech/ctf_custom-ui_demo"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^17.3.1"
+  },
+  "type": "module"
 }
