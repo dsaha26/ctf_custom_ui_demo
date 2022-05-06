@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://tg_test_runner.io/tests/test_e2e/test_data/schema.json",
+    "$id": "https://tg_test_runner.io/tests/test_e2e/test_data.schema.json",
     "title": "test_data",
     "description": "Test Data",
     "type": "object",
@@ -8,6 +8,8 @@
         "traffic_profile": {
             "description": "Traffic Profile",
             "type": "array",
+            "minItems": 0,
+            "uniqueItems": true,
             "items": {
                 "type": "object",
                 "properties": {
@@ -35,7 +37,8 @@
                         "type": "object",
                         "properties": {
                             "throughput": {
-                                "type": "number"
+                                "type": "number",
+                                "readOnly": false
                             },
                             "lost datagrams": {
                                 "type": "number",
@@ -56,7 +59,8 @@
                         "enum": [
                             "TCP",
                             "UDP"
-                        ]
+                        ],
+                        "readOnly": false
                     },
                     "direction": {
                         "type": "string",
@@ -87,9 +91,7 @@
                     "packet_size",
                     "time"
                 ]
-            },
-            "minItems": 0,
-            "uniqueItems": true
+            }
         }
     }
 }

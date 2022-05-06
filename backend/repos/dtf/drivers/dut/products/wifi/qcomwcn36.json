@@ -1,0 +1,14 @@
+{
+  "vendor": "qualcomm",
+  "chipset": "qcomwcn36",
+  "driver": "iwconfig $(ifconfig | sed 's/[ \t].*//;/^$/d' | grep ^wlan)",
+  "band": {
+    "2G": {
+      "bandwidth": {
+        "20M": {
+          "channels": "{{ drivers.dut.products.wifi.standard.band[\"2G\"].bandwidth[\"20M\"].primary.channels }}"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://dtf.io/test_setups/dvt/milan.schema.json",
+    "title": "milan",
+    "description": "Milan Test Setup",
+    "type": "object",
+    "properties": {
+        "output_directory": {
+            "description": "Output directory",
+            "type": "string",
+            "readOnly": false
+        },
+        "host": {
+            "description": "Host section",
+            "type": "object",
+            "properties": {
+                "username": {
+                    "type": "string",
+                    "readOnly": false
+                }
+            }
+        }
+    }
+}

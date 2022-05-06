@@ -5,25 +5,36 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Custom UI",
+            "name": "API - DTF - List",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/backend/api.py",
+            "console": "integratedTerminal",
+            "args": [
+                "dtf",
+                "list",
+                "test_setups"
+            ]
+        },
+        {
+            "name": "API - DTF - Scrape",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/backend/api.py",
+            "console": "integratedTerminal",
+            "args": [
+                "dtf",
+                "scrape",
+                "test_setups/dvt/milan/testbed1.json"
+            ]
+        },
+        {
+            "name": "UI",
             "type": "pwa-node",
             "request": "launch",
             "program": "${workspaceFolder}/index.js",
             "skipFiles": [
                 "<node_internals>/**"
-            ]
-        },
-        {
-            "name": "Scraper",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceFolder}/backend/scraper.py",
-            "console": "integratedTerminal",
-            "justMyCode": true,
-            "args": [
-                "dtf",
-                "list",
-                "test_setups"
             ]
         }
     ]
