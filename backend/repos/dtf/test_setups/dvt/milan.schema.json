@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://dtf.io/test_setups/dvt/milan.schema.json",
+    "$id": "https://ghe.oculus-rep.com/delart-tech/arvr_wp_automation_test_framework/test_setups/dvt/milan.schema.json",
     "title": "milan",
     "description": "Milan Test Setup",
     "type": "object",

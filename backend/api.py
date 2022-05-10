@@ -65,7 +65,9 @@ def _list(args):
         paths += _paths
 
     # only interested in config files
-    print(paths)
+    print(json.dumps({
+        "paths": paths,
+    }, indent=4))
 
 
 def _render_tree(_obj, values, paths_map):
@@ -133,6 +135,7 @@ def _scrape(args):
     for p in possible_schema_paths:
         if p in schema_paths:
             schema_path = p
+            break
 
     # if there is no schema, that is also ok
     # it just means that CTF UI will show everything readOnly
@@ -154,7 +157,7 @@ def _scrape(args):
     print(json.dumps({
         "config": expanded_config,
         "schema": expanded_schema,
-    }))
+    }, indent=4))
 
 
 parser = argparse.ArgumentParser("Scrapes some CTF Test Harness example repos.")

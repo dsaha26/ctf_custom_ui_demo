@@ -1,21 +1,15 @@
-# Custom UI Demo
+# Custom UI Demo - Frontend
 
-## Backend
+## UI
 
-### DTF
+node index.js \
+    ../backend/outputs/dtf/dvt__milan__testbed1.json \
+    ./inputs/dtf/dvt/dvt__milan__testbed1__overrides_good1.json
 
-python backend/api.py dtf list test_setups
+node index.js \
+    ../backend/outputs/dtf/dvt__milan__testbed1.json \
+    ./inputs/dtf/dvt/dvt__milan__testbed1__overrides_bad1.json
 
-python backend/api.py dtf scrape test_setups/dvt/milan/testbed1.json
-
-### TG
-
-python backend/api.py tg_test_runner list test_actions
-
-python backend/api.py tg_test_runner scrape tests/test_e2e/test_data/test_scenario_1.json
-
-python backend/api.py tg_test_runner scrape tests/test_e2e/test_data/test_scenario_2.json
-
-## Frontend
-
-node index.js
+node index.js \
+    ../backend/outputs/dtf/dvt__milan__testbed1.json \
+    ./inputs/dtf/dvt/dvt__milan__testbed1__overrides_bad2.json

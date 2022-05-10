@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://tg_test_runner.io/tests/test_e2e/test_data.schema.json",
+    "$id": "https://github.com/facebookexternal/evenstar-ctf/tests/test_e2e/test_data.schema.json",
     "title": "test_data",
     "description": "Test Data",
     "type": "object",
