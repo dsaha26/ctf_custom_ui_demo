@@ -5,14 +5,14 @@ poetry install
 
 ## DTF
 
-```
+```sh
 poetry run python api.py \
     dtf \
     list \
     test_setups
 ```
 
-```
+```sh
 poetry run python api.py \
     dtf \
     scrape \
@@ -22,14 +22,14 @@ poetry run python api.py \
 
 ## TG
 
-```
+```sh
 poetry run python api.py \
     tg_test_runner \
     list \
     test_actions
 ```
 
-```
+```sh
 poetry run python api.py \
     tg_test_runner \
     scrape \
@@ -37,7 +37,7 @@ poetry run python api.py \
     > outputs/tg_test_runner/test_e2e__test_data__test_scenario_1.json
 ```
 
-```
+```sh
 poetry run python api.py \
     tg_test_runner \
     scrape \
