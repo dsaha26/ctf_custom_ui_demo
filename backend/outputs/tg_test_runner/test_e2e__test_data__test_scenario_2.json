@@ -136,7 +136,7 @@
         ]
     },
     "schema": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$schema": "https://json-schema.org/draft-07/schema",
         "$id": "https://github.com/facebookexternal/evenstar-ctf/tests/test_e2e/test_data.schema.json",
         "title": "test_data",
         "description": "Test Data",
@@ -151,35 +151,28 @@
                     "type": "object",
                     "properties": {
                         "from_device_id": {
-                            "type": "integer",
-                            "readOnly": true
+                            "type": "integer"
                         },
                         "to_device_id": {
-                            "type": "integer",
-                            "readOnly": true
+                            "type": "integer"
                         },
                         "from_netns": {
-                            "type": "string",
-                            "readOnly": true
+                            "type": "string"
                         },
                         "to_netns": {
-                            "type": "string",
-                            "readOnly": true
+                            "type": "string"
                         },
                         "bandwidth": {
-                            "type": "integer",
-                            "readOnly": true
+                            "type": "integer"
                         },
                         "threshold": {
                             "type": "object",
                             "properties": {
                                 "throughput": {
-                                    "type": "number",
-                                    "readOnly": false
+                                    "type": "number"
                                 },
                                 "lost datagrams": {
-                                    "type": "number",
-                                    "readOnly": true
+                                    "type": "number"
                                 }
                             },
                             "required": [
@@ -188,31 +181,26 @@
                             ]
                         },
                         "port": {
-                            "type": "integer",
-                            "readOnly": true
+                            "type": "integer"
                         },
                         "traffic_type": {
                             "type": "string",
                             "enum": [
                                 "TCP",
                                 "UDP"
-                            ],
-                            "readOnly": false
+                            ]
                         },
                         "direction": {
                             "type": "string",
                             "enum": [
                                 "bi"
-                            ],
-                            "readOnly": true
+                            ]
                         },
                         "packet_size": {
-                            "type": "string",
-                            "readOnly": true
+                            "type": "string"
                         },
                         "time": {
-                            "type": "integer",
-                            "readOnly": true
+                            "type": "integer"
                         }
                     },
                     "required": [

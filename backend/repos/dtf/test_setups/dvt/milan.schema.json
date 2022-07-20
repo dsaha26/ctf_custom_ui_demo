@@ -1,5 +1,5 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$schema": "https://json-schema.org/draft-07/schema",
     "$id": "https://ghe.oculus-rep.com/delart-tech/arvr_wp_automation_test_framework/test_setups/dvt/milan.schema.json",
     "title": "milan",
     "description": "Milan Test Setup",
@@ -7,16 +7,14 @@
     "properties": {
         "output_directory": {
             "description": "Output directory",
-            "type": "string",
-            "readOnly": false
+            "type": "string"
         },
         "host": {
             "description": "Host section",
             "type": "object",
             "properties": {
                 "username": {
-                    "type": "string",
-                    "readOnly": false
+                    "type": "string"
                 }
             }
         }
