@@ -141,6 +141,7 @@
         "title": "test_data",
         "description": "Test Data",
         "type": "object",
+        "additionalProperties": false,
         "properties": {
             "traffic_profile": {
                 "description": "Traffic Profile",
@@ -149,6 +150,7 @@
                 "uniqueItems": true,
                 "items": {
                     "type": "object",
+                    "additionalProperties": false,
                     "properties": {
                         "from_device_id": {
                             "type": "integer"
@@ -167,6 +169,7 @@
                         },
                         "threshold": {
                             "type": "object",
+                            "additionalProperties": false,
                             "properties": {
                                 "throughput": {
                                     "type": "number"

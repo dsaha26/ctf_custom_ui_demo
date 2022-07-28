@@ -4,6 +4,7 @@
     "title": "milan",
     "description": "Milan Test Setup",
     "type": "object",
+    "additionalProperties": false,
     "properties": {
         "output_directory": {
             "description": "Output directory",
@@ -12,6 +13,7 @@
         "host": {
             "description": "Host section",
             "type": "object",
+            "additionalProperties": false,
             "properties": {
                 "username": {
                     "type": "string"
