@@ -34,7 +34,7 @@
                             "throughput": {
                                 "type": "number"
                             },
-                            "lost datagrams": {
+                            "lost_datagrams": {
                                 "type": "number"
                             }
                         },

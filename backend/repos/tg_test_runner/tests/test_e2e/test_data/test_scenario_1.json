@@ -12,7 +12,7 @@
             "bandwidth": 50,
             "threshold": {
                 "throughput": 0.80,
-                "lost datagrams": 1.00
+                "lost_datagrams": 1.00
             },
             "port": 5002,
             "traffic_type": "UDP",
@@ -28,7 +28,7 @@
             "bandwidth": 50,
             "threshold": {
                 "throughput": 0.80,
-                "lost datagrams": 1.00
+                "lost_datagrams": 1.00
             },
             "port": 5004,
             "traffic_type": "UDP",
@@ -44,7 +44,7 @@
             "bandwidth": 50,
             "threshold": {
                 "throughput": 0.80,
-                "lost datagrams": 1.00
+                "lost_datagrams": 1.00
             },
             "port": 5006,
             "traffic_type": "UDP",
@@ -60,7 +60,7 @@
             "bandwidth": 50,
             "threshold": {
                 "throughput": 0.80,
-                "lost datagrams": 1.00
+                "lost_datagrams": 1.00
             },
             "port": 5008,
             "traffic_type": "UDP",
@@ -76,7 +76,7 @@
             "bandwidth": 50,
             "threshold": {
                 "throughput": 0.80,
-                "lost datagrams": 1.00
+                "lost_datagrams": 1.00
             },
             "port": 5010,
             "traffic_type": "UDP",
@@ -92,7 +92,7 @@
             "bandwidth": 50,
             "threshold": {
                 "throughput": 0.80,
-                "lost datagrams": 1.00
+                "lost_datagrams": 1.00
             },
             "port": 5012,
             "traffic_type": "UDP",
@@ -108,7 +108,7 @@
             "bandwidth": 50,
             "threshold": {
                 "throughput": 0.80,
-                "lost datagrams": 1.00
+                "lost_datagrams": 1.00
             },
             "port": 5014,
             "traffic_type": "UDP",
@@ -124,7 +124,7 @@
             "bandwidth": 50,
             "threshold": {
                 "throughput": 0.80,
-                "lost datagrams": 1.00
+                "lost_datagrams": 1.00
             },
             "port": 5016,
             "traffic_type": "UDP",
