@@ -6,83 +6,42 @@
     "type": "object",
     "additionalProperties": false,
     "properties": {
-        "traffic_profile": {
-            "description": "Traffic Profile",
-            "type": "array",
-            "minItems": 0,
-            "uniqueItems": true,
-            "items": {
-                "type": "object",
-                "additionalProperties": false,
-                "properties": {
-                    "from_device_id": {
-                        "type": "integer"
-                    },
-                    "to_device_id": {
-                        "type": "integer"
-                    },
-                    "from_netns": {
-                        "type": "string"
-                    },
-                    "to_netns": {
-                        "type": "string"
-                    },
-                    "bandwidth": {
-                        "type": "integer"
-                    },
-                    "threshold": {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "properties": {
-                            "throughput": {
-                                "type": "number"
-                            },
-                            "lost_datagrams": {
-                                "type": "number"
-                            }
-                        },
-                        "required": [
-                            "throughput",
-                            "lost_datagrams"
-                        ]
-                    },
-                    "port": {
-                        "type": "integer"
-                    },
-                    "traffic_type": {
-                        "type": "string",
-                        "enum": [
-                            "TCP",
-                            "UDP"
-                        ]
-                    },
-                    "direction": {
-                        "type": "string",
-                        "enum": [
-                            "bi"
-                        ]
-                    },
-                    "packet_size": {
-                        "type": "string"
-                    },
-                    "time": {
-                        "type": "integer"
-                    }
+        "ctf_json_args": {
+            "description": "Args for the CTF Json",
+            "type": "object",
+            "properties": {
+                "bandwidth": {
+                    "type": "integer",
+                    "enum": [
+                        1.4, 3, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100
+                    ]
                 },
-                "required": [
-                    "from_device_id",
-                    "to_device_id",
-                    "from_netns",
-                    "to_netns",
-                    "bandwidth",
-                    "threshold",
-                    "port",
-                    "traffic_type",
-                    "direction",
-                    "packet_size",
-                    "time"
-                ]
+                "cc0_frequency": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 2000
+                },
+                "cc1_frequency": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 2000
+                },
+                "channel": {
+                    "type": "string",
+                    "enum": [
+                        "top",
+                        "middle",
+                        "bottom"
+                    ]
+                }
             }
+        },
+        "pcap_cache_mode": {
+            "type": "string",
+            "enum": [
+                "overwrite",
+                "merge"
+            ]
         }
     }
 }
