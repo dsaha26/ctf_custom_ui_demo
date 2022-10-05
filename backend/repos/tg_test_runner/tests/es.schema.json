@@ -1,0 +1,47 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://github.com/facebookexternal/evenstar-ctf/tests/test_e2e/test_data.schema.json",
+    "title": "test_data",
+    "description": "Test Data",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "ctf_json_args": {
+            "description": "Args for the CTF Json",
+            "type": "object",
+            "properties": {
+                "bandwidth": {
+                    "type": "integer",
+                    "enum": [
+                        1.4, 3, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100
+                    ]
+                },
+                "cc0_frequency": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 2000
+                },
+                "cc1_frequency": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 2000
+                },
+                "channel": {
+                    "type": "string",
+                    "enum": [
+                        "top",
+                        "middle",
+                        "bottom"
+                    ]
+                }
+            }
+        },
+        "pcap_cache_mode": {
+            "type": "string",
+            "enum": [
+                "overwrite",
+                "merge"
+            ]
+        }
+    }
+}
