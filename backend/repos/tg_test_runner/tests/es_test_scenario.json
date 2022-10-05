@@ -1,0 +1,9 @@
+{
+    "ctf_json_args": {
+      "bandwidth" : 20,
+      "cc0_frequency" : 1843,
+      "cc1_frequency" : 0,
+      "channel" : "bottom"
+    },
+    "pcap_cache_mode": "overwrite"
+  }
